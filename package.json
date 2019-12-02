@@ -1,0 +1,39 @@
+{
+  "name": "musixmatch",
+  "version": "0.1.0",
+  "description": "musixmatch API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel test/index.html",
+    "build": "parcel build test/index.html"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/plugin-transform-runtime": "latest",
+    "@babel/runtime-corejs2": "latest",
+    "node-fetch": "latest",
+    "query-parse": "latest"
+  },
+  "keywords": [
+    "musixmatch",
+    "api",
+    "lyrics",
+    "musixmatch-lyrics",
+    "lyrics-api",
+    "music-lyrics"
+  ],
+  "author": "IMAN",
+  "license": "MIT",
+  "homepage": "https://www.axfon.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zyrouge/musixmatch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zyrouge/musixmatch.git/issues/"
+  }
+}

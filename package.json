@@ -1,6 +1,6 @@
 {
   "name": "musixmatch",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Fetches Lyrics from Musixmatch API",
   "main": "index.js",
   "scripts": {

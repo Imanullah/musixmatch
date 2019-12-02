@@ -14,6 +14,8 @@ Request are pretty awesome, but I found myself using it into NodeJS
 
 Also check out [here](https://github.com/c0b41/musixmatch#methods) to using the methods that are very similar to request
 
+[📖 **Release Notes**](./CHANGELOG.md)
+
 ## Setup
 
 1. Add `musixmatch` dependency to your project

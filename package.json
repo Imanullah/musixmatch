@@ -10,16 +10,17 @@
   "engines": {
     "node": ">=8"
   },
-  "dependencies": {},
+  "dependencies": {
+    "node-fetch": "latest",
+    "query-parse": "latest"
+  },
   "devDependencies": {
     "@babel/core": "latest",
     "@babel/plugin-transform-runtime": "latest",
     "@babel/runtime": "^7.7.4",
     "@babel/runtime-corejs2": "latest",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-polyfill": "^6.26.0",
-    "node-fetch": "latest",
-    "query-parse": "latest"
+    "babel-polyfill": "^6.26.0"
   },
   "keywords": [
     "musixmatch",
@@ -34,9 +35,9 @@
   "homepage": "https://axfon.com",
   "repository": {
     "type": "git",
-    "url": "git://github.com/zyrouge/musixmatch.git"
+    "url": "https://github.com/Imanullah/nuxt-musixmatch.git"
   },
   "bugs": {
-    "url": "https://github.com/zyrouge/musixmatch.git/issues/"
+    "url": "https://github.com/Imanullah/musixmatch/issues/"
   }
 }

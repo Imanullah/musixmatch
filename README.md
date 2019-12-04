@@ -4,10 +4,6 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 
-#THIS MODULE ON TESTING
-
-
-
 NodeJS module musixmatch API
 The simplified NodeJS module for request Musixmatch API support. Inspire by https://github.com/c0b41/musixmatch.
 Request are pretty awesome, but I found myself using it into NodeJS
@@ -18,43 +14,72 @@ Also check out [here](https://github.com/c0b41/musixmatch#methods) to using the 
 
 ## Setup
 
-1. Add `musixmatch` dependency to your project
+Add `musixmatch` dependency to your project
 
 ```bash
 npm install musixmatch # or yarn add musixmatch
 ```
 
-2. Declaring & Creating a Client
-Now you can use all Musixmatch services followed by method
+## Declaring & Creating a Client
+You need to setup initial configuration
+you can use all Musixmatch services then followed by method
 
 ```js
 const Musixmatch = require("musixmatch");
 const init = {
-	apikey: '<Your Musicmatch API Key',
-	baseURL: 'https://api.musixmatch.com/ws/1.1/', // Optional default 'https://api.musixmatch.com/ws/1.1/'
-	corsURL: 'https://cors-anywhere.herokuapp.com/', //Optional if you have problem with CORS default is 'https://cors-anywhere.herokuapp.com/'
-  // Optional Fetches API request
+	// Required from Musixmatch.com
+	apikey: '<Your Musicmatch API Key>',
+
+	// Optional default 'https://api.musixmatch.com/ws/1.1/'
+	// baseURL will be prepended to `url` unless `url` is absolute.
+	baseURL: 'https://api.musixmatch.com/ws/1.1/',
+
+	// Optional if you have problem with CORS, default is 'https://cors-anywhere.herokuapp.com/'
+	// if you want remove prefix CORS url set value tobe ''
+	corsURL: '<Your cors url>',
+
+	// Optional default is 'Json'
+	format: 'json'
+
+  // More Optional Fetches API request
   options: {
-		mode: 'cors'
+		// `headers` are custom headers to be sent
+		headers: {......}
 	}
 }
+
 const msx = Musixmatch(init)
 
-msx.chartArtists({ country: 'us', page: 1, page_size: 10 }).then(function (data) {
-	console.log(data.artist_list)
-}).catch(function (err) {
-	console.log(err.stack)
-})
 ```
+## Initinal Options
+These are the available config options for making requests, for more information https://github.com/axios/axios#request-config
 
 ## Methods
 For more information how to use Methods and Params with example... please refer to https://github.com/c0b41/musixmatch#methods
 
+## Example
+
+```js
+import Musixmatch from 'musixmatch'
+
+const msx = Musixmatch({apikey: '<Api Key>'})
+
+msx.chartArtists({ country: 'us', page: 1, page_size: 3 }).then(function (data) {
+	console.log(data.artist_list)
+}).catch(function (err) {
+	console.log(err.stack)
+})
+
+```
 ## License
 
 [MIT License](./LICENSE)
 
 Copyright (c) IMAN
+Thanks to:
+https://www.axfon.com
+https://atel.us
+
 
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/musixmatch/latest.svg?style=flat-square

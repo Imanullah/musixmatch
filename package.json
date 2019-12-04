@@ -1,6 +1,6 @@
 {
   "name": "musixmatch",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Fetches Lyrics from Musixmatch API",
   "main": "index.js",
   "scripts": {
@@ -11,16 +11,18 @@
     "node": ">=8"
   },
   "dependencies": {
-    "node-fetch": "latest",
-    "query-parse": "latest"
+    "axios": "latest"
   },
   "devDependencies": {
-    "@babel/core": "latest",
-    "@babel/plugin-transform-runtime": "latest",
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-transform-runtime": "^7.7.4",
     "@babel/runtime": "^7.7.4",
     "@babel/runtime-corejs2": "latest",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^1.0.2",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-polyfill": "^6.26.0"
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
   },
   "keywords": [
     "musixmatch",
@@ -32,7 +34,7 @@
   ],
   "author": "IMAN",
   "license": "MIT",
-  "homepage": "https://axfon.com",
+  "homepage": "https://atel.us",
   "repository": {
     "type": "git",
     "url": "https://github.com/Imanullah/nuxt-musixmatch.git"

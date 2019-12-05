@@ -1,9 +1,7 @@
 import Musixmatch from 'musixmatch'
 
 const init = {
-	apikey: '<Api Key>',
-	baseURL: 'https://api.musixmatch.com/ws/1.1/',
-	corsURL: ''
+	apikey: '<Yout Musixmatch API>'
 }
 const msx = Musixmatch(init)
 
